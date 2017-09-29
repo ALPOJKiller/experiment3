@@ -16,7 +16,7 @@ void init() {
     for (unsigned i = 2; i <= 100000 / 2; ++i) {
         if (is_prime[i]) {
             //将i*j标记为非素数
-            for (unsigned j = 2; i * j <= 100000; ++j) {
+            for (unsigned j = i; i * j <= 100000; ++j) {
                 is_prime[i * j] = false;
             }
         }
